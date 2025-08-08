@@ -5,5 +5,4 @@ Disallow: /webfonts/
 
 Allow: /
 
-Host: https://360wrap.vercel.app
-Sitemap: https://360wrap.vercel.app/sitemap.xml
+Sitemap: https://www.360wraps.ae/sitemap.xml
