@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /webfonts/
+
+Allow: /
+
+Host: https://360wrap.vercel.app
+Sitemap: https://360wrap.vercel.app/sitemap.xml
