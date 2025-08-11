@@ -4755,4 +4755,16 @@ header.main-header .header-sticky.active .navbar{
 	.error-page-image img{
         max-width: 100%;
     }
+
 }
+
+
+
+
+
+
+.breadcrumbs { font-size: 14px; margin: 12px 0; }
+.breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+.breadcrumbs li+li::before { content: "›"; opacity: .6; margin: 0 .25rem; }
+.breadcrumbs a { text-decoration: none; color: #666; }
+.breadcrumbs [aria-current="page"] { color: #111; font-weight: 600; }
