@@ -190,6 +190,20 @@
     <!-- About Us Section Start -->
     <div class="about-us page-about-us">
       <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="https://www.360wraps.ae/">Home</a></li>
+            <li>About Us</li>
+          </ol>
+        </nav>
+        
+        <style>
+          .breadcrumbs { font-size: 14px; margin: 12px 0; }
+          .breadcrumbs ol { list-style: none; padding: 0; margin: 0; display: flex; gap: .5rem; flex-wrap: wrap; }
+          .breadcrumbs li+li::before { content: "›"; opacity: .6; margin: 0 .25rem; }
+          .breadcrumbs a { text-decoration: none; color: #666; }
+          .breadcrumbs [aria-current="page"] { color: #111; font-weight: 600; }
+        </style>
         <div class="row align-items-center">
           <div class="col-lg-6">
             <!-- About Us Images Start -->
@@ -802,3 +816,4 @@
     <script src="js/function.js"></script>
   </body>
 </html>
+
