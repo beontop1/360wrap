@@ -43,93 +43,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYQ51H85MT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-TYQ51H85MT');
-
-
-		'use strict';
-
-console.log('BeOnTop Goals Plugin is Active');
-
-var goalsModule = function () {
-    // Enable/Disable tracking services
-    var isMultilang = false;
-
-    var goalDone = function goalDone(goalName, goalCategory) {
-        if (isMultilang) {
-            const lang = document.getElementsByTagName('html')[0].getAttribute('lang') || null;
-            if (lang) goalName = `${goalName} ${lang[0].toUpperCase() + lang.slice(1)}`;
-            else console.warn('У тега html отсутствует атрибут lang');
-        }
-
-        Object.keys(window).forEach(function (key) {
-            if (key.includes('yaCounter')) window[key].reachGoal(goalName, function () { });
-        });
-
-        if (typeof ga !== 'undefined') window.ga('send', 'event', goalCategory, goalName);
-        if (typeof gtag !== 'undefined') window.gtag('event', goalName, { event_category: goalCategory });
-        if (typeof fbq !== 'undefined') window.fbq('track', goalName, {});
-        console.log('Goal done. name: ' + goalName + ', category: ' + goalCategory);
-    };
-
-    var body = document.querySelector('body');
-
-    body.addEventListener('click', function (event) {
-        var target = event.target;
-        var targetButton = event.target;
-
-        if (target.tagName !== 'A') {
-            target = target.closest('a');
-            if (target == null) return;
-        }
-
-        if (target.href.includes('tel:') && window.innerWidth < 1000) goalDone('Click_on_Phone', 'Clicks');
-        if (target.href.includes('mailto:')) goalDone('Click_on_Email', 'Clicks');
-
-        if (target.href.includes('https://www.facebook.com/')) goalDone('Click_on_FaceBook', 'Clicks');
-        if (
-            target.href.includes('whatsapp.com') ||  // охватывает web, api, send
-            target.href.includes('wa.me') ||
-            target.href.includes('wa.link')
-        ) goalDone('Click_on_WhatsApp', 'Clicks');
-        if (target.href.includes('tg:')) goalDone('Click_on_Telegram', 'Clicks');
-        if (target.href.includes('linkedin.com/company')) goalDone('Click_on_LinkedIn', 'Clicks');
-        if (target.href.includes('instagram.com')) goalDone('Click_on_Instagram', 'Clicks');
-        if (target.href.includes('/checkout/')) goalDone('Place_Order', 'Ecommerce');
-        if (target.href.includes('?action=yith-woocompare-add-product')) goalDone('Add_to_Compare', 'Ecommerce');
-      
-        if (targetButton.tagName !== 'BUTTON') {
-            targetButton = targetButton.closest('button');
-            if (targetButton == null) return;
-        }
-
-        if (targetButton.name.includes('add-to-cart')) goalDone('Add_to_Cart', 'Ecommerce');
-
-    }, { passive: true });
-    
-    if (window.location.href.includes('order-received')) goalDone('Purchase', 'Ecommerce');
-    
-    //Tawk form integration added
-    if (typeof (Tawk_API) != "undefined") {
-        Tawk_API = Tawk_API || {};
-        Tawk_API.onOfflineSubmit = function (data) {
-            goalDone('Tawk_Form', 'Email');
-        };
-    }
-
-    return Object.freeze({
-        trigger: function trigger(name, params) {
-            goalDone(name, params);
-        }
-    });
-}();
-
-    </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TYQ51H85MT"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-TYQ51H85MT');
+	</script>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -1754,6 +1675,7 @@ var goalsModule = function () {
     <script src="js/function.js"></script>
   </body>
 </html>
+
 
 
 
