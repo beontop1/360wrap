@@ -48,124 +48,6 @@
       gtag('js', new Date());
     
       gtag('config', 'G-TYQ51H85MT');
-
-
-		'use strict';
-
-console.log('BeOnTop Goals Plugin is Active');
-
-/**
- * GOALS NAMING CONVENTION
- *
- * Category: 'Clicks'
- * Action: 'Click on Phone' - Клик на телефон
- * Action: 'Click on Email' - Клик на почту
- * Action: 'Click on WhatsApp' - Клик на WhatsApp
- * Action: 'Click on Telegram' - Клик на Telegram
- *
- * Category: Email
- * Action: 'Email Enquiry' - форма Book Now форму и аналогичные
- * Action: 'Email Feedback' - ФОС на странице контакты или в подвале
- * Action: 'Email Callback' - Заказ звонка
- * Action: 'Email Review' - Добавление отзыва
- * Action: 'Email Specialist' - Вызов специалиста
- * Action: 'Email Subscribe' - Подписаться на рассылку
- * Action: 'Email Career' - Отклик на вакансию
- *
- * Category: 'Ecommerce'
- * Action: 'View Product' - Просмотр продукта
- * Action: 'Add to Cart' - Добавление в корзину
- * Action: 'Remove from Cart' - Удаление из корзины
- * Action: 'Purchase' - Покупка
- * Action: 'Get Price List' - Получить прайс
- * Action: 'Enquire' - Отправить запрос
- * Action: 'Quick Order' - Заказ без корзины (купить в 1 клик)
- * Action: 'Review Product' - Отзыв к товару
- */
-
-/**
- * Component for tracking goals
- *
- * Usage example:
- * goalsModule.trigger('goalName', 'goalCategory');
- *
- * @requires jquery
- * @type {{trigger}}
- */
-
-var goalsModule = function () {
-    // Enable/Disable tracking services
-    var isMultilang = false;
-
-    var goalDone = function goalDone(goalName, goalCategory) {
-        if (isMultilang) {
-            const lang = document.getElementsByTagName('html')[0].getAttribute('lang') || null;
-            if (lang) goalName = `${goalName} ${lang[0].toUpperCase() + lang.slice(1)}`;
-            else console.warn('У тега html отсутствует атрибут lang');
-        }
-
-        Object.keys(window).forEach(function (key) {
-            if (key.includes('yaCounter')) window[key].reachGoal(goalName, function () { });
-        });
-
-        if (typeof ga !== 'undefined') window.ga('send', 'event', goalCategory, goalName);
-        if (typeof gtag !== 'undefined') window.gtag('event', goalName, { event_category: goalCategory });
-        if (typeof fbq !== 'undefined') window.fbq('track', goalName, {});
-        console.log('Goal done. name: ' + goalName + ', category: ' + goalCategory);
-    };
-
-    var body = document.querySelector('body');
-
-    body.addEventListener('click', function (event) {
-        var target = event.target;
-        var targetButton = event.target;
-
-        if (target.tagName !== 'A') {
-            target = target.closest('a');
-            if (target == null) return;
-        }
-
-        if (target.href.includes('tel:') && window.innerWidth < 1000) goalDone('Click_on_Phone', 'Clicks');
-        if (target.href.includes('mailto:')) goalDone('Click_on_Email', 'Clicks');
-
-        if (target.href.includes('https://www.facebook.com/')) goalDone('Click_on_FaceBook', 'Clicks');
-        if (
-            target.href.includes('whatsapp.com') ||  // охватывает web, api, send
-            target.href.includes('wa.me') ||
-            target.href.includes('wa.link')
-        ) goalDone('Click_on_WhatsApp', 'Clicks');
-        if (target.href.includes('tg:')) goalDone('Click_on_Telegram', 'Clicks');
-        if (target.href.includes('linkedin.com/company')) goalDone('Click_on_LinkedIn', 'Clicks');
-        if (target.href.includes('instagram.com')) goalDone('Click_on_Instagram', 'Clicks');
-        if (target.href.includes('/checkout/')) goalDone('Place_Order', 'Ecommerce');
-        if (target.href.includes('?action=yith-woocompare-add-product')) goalDone('Add_to_Compare', 'Ecommerce');
-      
-        if (targetButton.tagName !== 'BUTTON') {
-            targetButton = targetButton.closest('button');
-            if (targetButton == null) return;
-        }
-
-        if (targetButton.name.includes('add-to-cart')) goalDone('Add_to_Cart', 'Ecommerce');
-
-    }, { passive: true });
-    
-    if (window.location.href.includes('order-received')) goalDone('Purchase', 'Ecommerce');
-    
-    //Tawk form integration added
-    if (typeof (Tawk_API) != "undefined") {
-        Tawk_API = Tawk_API || {};
-        Tawk_API.onOfflineSubmit = function (data) {
-            goalDone('Tawk_Form', 'Email');
-        };
-    }
-
-    return Object.freeze({
-        trigger: function trigger(name, params) {
-            goalDone(name, params);
-        }
-    });
-}();
-
     </script>
 
     <!-- Meta Pixel Code -->
@@ -867,7 +749,129 @@ var goalsModule = function () {
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+	  
+
+
+	  <script>
+		  'use strict';
+
+console.log('BeOnTop Goals Plugin is Active');
+
+/**
+ * GOALS NAMING CONVENTION
+ *
+ * Category: 'Clicks'
+ * Action: 'Click on Phone' - Клик на телефон
+ * Action: 'Click on Email' - Клик на почту
+ * Action: 'Click on WhatsApp' - Клик на WhatsApp
+ * Action: 'Click on Telegram' - Клик на Telegram
+ *
+ * Category: Email
+ * Action: 'Email Enquiry' - форма Book Now форму и аналогичные
+ * Action: 'Email Feedback' - ФОС на странице контакты или в подвале
+ * Action: 'Email Callback' - Заказ звонка
+ * Action: 'Email Review' - Добавление отзыва
+ * Action: 'Email Specialist' - Вызов специалиста
+ * Action: 'Email Subscribe' - Подписаться на рассылку
+ * Action: 'Email Career' - Отклик на вакансию
+ *
+ * Category: 'Ecommerce'
+ * Action: 'View Product' - Просмотр продукта
+ * Action: 'Add to Cart' - Добавление в корзину
+ * Action: 'Remove from Cart' - Удаление из корзины
+ * Action: 'Purchase' - Покупка
+ * Action: 'Get Price List' - Получить прайс
+ * Action: 'Enquire' - Отправить запрос
+ * Action: 'Quick Order' - Заказ без корзины (купить в 1 клик)
+ * Action: 'Review Product' - Отзыв к товару
+ */
+
+/**
+ * Component for tracking goals
+ *
+ * Usage example:
+ * goalsModule.trigger('goalName', 'goalCategory');
+ *
+ * @requires jquery
+ * @type {{trigger}}
+ */
+
+var goalsModule = function () {
+    // Enable/Disable tracking services
+    var isMultilang = false;
+
+    var goalDone = function goalDone(goalName, goalCategory) {
+        if (isMultilang) {
+            const lang = document.getElementsByTagName('html')[0].getAttribute('lang') || null;
+            if (lang) goalName = `${goalName} ${lang[0].toUpperCase() + lang.slice(1)}`;
+            else console.warn('У тега html отсутствует атрибут lang');
+        }
+
+        Object.keys(window).forEach(function (key) {
+            if (key.includes('yaCounter')) window[key].reachGoal(goalName, function () { });
+        });
+
+        if (typeof ga !== 'undefined') window.ga('send', 'event', goalCategory, goalName);
+        if (typeof gtag !== 'undefined') window.gtag('event', goalName, { event_category: goalCategory });
+        if (typeof fbq !== 'undefined') window.fbq('track', goalName, {});
+        console.log('Goal done. name: ' + goalName + ', category: ' + goalCategory);
+    };
+
+    var body = document.querySelector('body');
+
+    body.addEventListener('click', function (event) {
+        var target = event.target;
+        var targetButton = event.target;
+
+        if (target.tagName !== 'A') {
+            target = target.closest('a');
+            if (target == null) return;
+        }
+
+        if (target.href.includes('tel:') && window.innerWidth < 1000) goalDone('Click_on_Phone', 'Clicks');
+        if (target.href.includes('mailto:')) goalDone('Click_on_Email', 'Clicks');
+
+        if (target.href.includes('https://www.facebook.com/')) goalDone('Click_on_FaceBook', 'Clicks');
+        if (
+            target.href.includes('whatsapp.com') ||  // охватывает web, api, send
+            target.href.includes('wa.me') ||
+            target.href.includes('wa.link')
+        ) goalDone('Click_on_WhatsApp', 'Clicks');
+        if (target.href.includes('tg:')) goalDone('Click_on_Telegram', 'Clicks');
+        if (target.href.includes('linkedin.com/company')) goalDone('Click_on_LinkedIn', 'Clicks');
+        if (target.href.includes('instagram.com')) goalDone('Click_on_Instagram', 'Clicks');
+        if (target.href.includes('/checkout/')) goalDone('Place_Order', 'Ecommerce');
+        if (target.href.includes('?action=yith-woocompare-add-product')) goalDone('Add_to_Compare', 'Ecommerce');
+      
+        if (targetButton.tagName !== 'BUTTON') {
+            targetButton = targetButton.closest('button');
+            if (targetButton == null) return;
+        }
+
+        if (targetButton.name.includes('add-to-cart')) goalDone('Add_to_Cart', 'Ecommerce');
+
+    }, { passive: true });
+    
+    if (window.location.href.includes('order-received')) goalDone('Purchase', 'Ecommerce');
+    
+    //Tawk form integration added
+    if (typeof (Tawk_API) != "undefined") {
+        Tawk_API = Tawk_API || {};
+        Tawk_API.onOfflineSubmit = function (data) {
+            goalDone('Tawk_Form', 'Email');
+        };
+    }
+
+    return Object.freeze({
+        trigger: function trigger(name, params) {
+            goalDone(name, params);
+        }
+    });
+}();
+
+	  </script>
   </body>
 </html>
+
 
 
