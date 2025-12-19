@@ -245,6 +245,75 @@
 .cta-button:hover {
   background: #333;
 }
+.about-wraps {
+  padding: 70px 20px;
+  background: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.intro-text {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.about-wraps h2 {
+  font-size: 30px;
+  color: #111;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about-wraps h2::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #000;
+  display: block;
+  margin-top: 8px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.benefits-list li {
+  background: #f8f8f8;
+  padding: 18px 20px;
+  border-left: 4px solid #000;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  font-size: 15.5px;
+}
+
+.brand-box {
+  background: #111;
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 6px;
+}
+
+.brand-box p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 	</style>
   </head>
   <body>
@@ -395,6 +464,54 @@
 
     <!-- Our Services Section Start -->
     <div class="page-services">
+      <div class="container">
+        <section class="about-wraps">
+  <div class="container">
+
+    <p class="intro-text">
+      <strong>360Wraps</strong> is the UAE’s leading provider of interior and architectural vinyl
+      wrapping solutions, offering seamless installations for residential, commercial,
+      and corporate environments. From kitchen refinishing and flooring wraps to office
+      branding, elevator skins, furniture laminates, and architectural surface films, our
+      expertise lies in delivering high-performance, aesthetic, and durable transformations
+      with <strong>zero mess, zero downtime, and zero demolition</strong>.
+      <br><br>
+      Whether you’re upgrading an existing space or rebranding a full facility, we use
+      globally certified films and architectural-grade materials engineered for heat
+      resistance, moisture protection, scratch resistance, long-term adhesion, and
+      flawless aesthetics.
+    </p>
+
+    <h2>Why Vinyl Wrapping?</h2>
+    <p class="subtitle">
+      Architectural vinyl wraps are rapidly becoming the preferred alternative to renovation due to their:
+    </p>
+
+    <ul class="benefits-list">
+      <li>Budget-friendly installation (up to 70% cheaper than replacement)</li>
+      <li>Quick turnaround and minimal disruption</li>
+      <li>Durable, heat- and moisture-resistant surface films</li>
+      <li>Eco-friendly renovation with reduced waste</li>
+      <li>
+        Flexible design options including woodgrain, marble, matte, metallic,
+        textured, and fabric finishes
+      </li>
+      <li>Easy maintenance with long-lasting performance</li>
+    </ul>
+
+    <div class="brand-box">
+      <p>
+        360Wraps uses premium brands like
+        <strong>3M DI-NOC, LG Hausys, Avery Dennison,</strong> and
+        <strong>FENIX</strong> architectural films, ensuring commercial-grade
+        durability for high-traffic areas.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+</div>
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <ol>
@@ -1190,10 +1307,3 @@ var goalsModule = function () {
 	  </script>
   </body>
 </html>
-
-
-
-
-
-
-
