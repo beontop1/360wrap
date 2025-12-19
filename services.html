@@ -158,9 +158,96 @@
  }
  }]
 }</script>
-    
+    <style>
+		.wraps-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.wraps-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+  position: relative;
+}
+
+.wraps-section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #000;
+  display: block;
+  margin-top: 8px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-bottom: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  background: #fff;
+  padding: 15px 18px;
+  border-left: 4px solid #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.industry-grid span {
+  background: #fff;
+  padding: 14px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cta-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #333;
+}
+	</style>
   </head>
-  <body myattr>
+  <body>
     <!-- Preloader Start -->
     <div class="preloader">
       <div class="loading-container">
@@ -708,6 +795,50 @@
             <!-- Service Item End -->
           </div>
         </div>
+		  <section class="wraps-section">
+  <div class="container">
+
+    <h2>Why Choose 360Wraps?</h2>
+    <ul class="feature-list">
+      <li>Specialists in architectural surface wrapping</li>
+      <li>Highly trained installation technicians</li>
+      <li>Premium-quality, certified materials</li>
+      <li>100% bubble-free and seamless application</li>
+      <li>Heat-gun and precision-tool installation techniques</li>
+      <li>Long-term adhesion with easy maintenance</li>
+      <li>Design consultation and custom solutions</li>
+      <li>Quick turnaround with zero disruption</li>
+      <li>UAE-wide service coverage</li>
+    </ul>
+
+    <h2>Industries We Serve</h2>
+    <p class="subtitle">
+      360Wraps delivers professional vinyl wrapping solutions for:
+    </p>
+
+    <div class="industry-grid">
+      <span>Residential properties</span>
+      <span>Offices & corporate buildings</span>
+      <span>Hotels & hospitality</span>
+      <span>Retail stores & shopping malls</span>
+      <span>Restaurants & cafés</span>
+      <span>Clinics, salons & spas</span>
+      <span>Schools & universities</span>
+      <span>Event spaces</span>
+      <span>Government buildings</span>
+    </div>
+
+    <h2>Get a Free Consultation & Quote</h2>
+    <p class="cta-text">
+      If you are looking to renovate, refresh, or redesign your space without demolition,
+      downtime, or high renovation costs, 360Wraps is your trusted partner across the UAE.
+      Contact us today to schedule a site visit or request a design proposal.
+    </p>
+
+    <a href="#" class="cta-button">Request Free Consultation</a>
+
+  </div>
+</section>
       </div>
     </div>
     <!-- Our Services Section End -->
@@ -1059,6 +1190,7 @@ var goalsModule = function () {
 	  </script>
   </body>
 </html>
+
 
 
 
