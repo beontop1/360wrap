@@ -42,6 +42,104 @@
     <link rel="stylesheet" href="../css/mousecursor.css" />
     <!-- Main Custom Css -->
     <link href="../css/custom.css" rel="stylesheet" media="screen" />
+    <style>
+        body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  background: #fff;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 40px;
+  color: #111;
+  border-left: 5px solid #000;
+  padding-left: 15px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 25px;
+  color: #222;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.feature-list,
+.arrow-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.feature-list li,
+.arrow-list li {
+  padding-left: 30px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.arrow-list li::before {
+  content: "➜";
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.style-grid span {
+  background: #f2f2f2;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.process-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.process-list li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 25px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+
+    </style>
   </head>
   <body>
     <!-- Preloader Start -->
