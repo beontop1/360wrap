@@ -2965,7 +2965,7 @@ header.main-header .header-sticky.active .navbar{
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: capitalize;
-	padding: 12px 45px 12px 30px;
+	padding: 12px 50px 12px 30px;
 	border: none;
 	border-radius: 0;
 	text-decoration: none;
@@ -2984,7 +2984,7 @@ header.main-header .header-sticky.active .navbar{
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 20px;
+	right: 25px;
 	width: 16px;
 	height: 16px;
 	background-image: url(../images/arrow-white.svg);
@@ -4336,7 +4336,7 @@ header.main-header .header-sticky.active .navbar{
 
 	.bot-btn{
 		font-size: 14px;
-		padding: 10px 25px;
+		padding: 10px 40px 10px 20px;
 	}
 
 	.page-pagination{
