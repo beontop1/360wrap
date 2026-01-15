@@ -2965,7 +2965,7 @@ header.main-header .header-sticky.active .navbar{
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: capitalize;
-	padding: 12px 30px;
+	padding: 12px 45px 12px 30px;
 	border: none;
 	border-radius: 0;
 	text-decoration: none;
@@ -2984,7 +2984,7 @@ header.main-header .header-sticky.active .navbar{
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 15px;
+	right: 20px;
 	width: 16px;
 	height: 16px;
 	background-image: url(../images/arrow-white.svg);
