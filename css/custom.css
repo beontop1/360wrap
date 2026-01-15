@@ -2984,7 +2984,7 @@ header.main-header .header-sticky.active .navbar{
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 25px;
+	right: 20px;
 	width: 16px;
 	height: 16px;
 	background-image: url(../images/arrow-white.svg);
