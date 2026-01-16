@@ -21,14 +21,14 @@
   <url><loc>https://www.360wraps.ae/ServicePage/3D_Tiles.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Bathroom.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Elevator.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.360wraps.ae/ServicePage/FloorWraps.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.360wraps.ae/ServicePage/FloorWraps.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Furniture.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Interior_door.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Kitchen.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/KitchenCounterTop.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Office.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Reception.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.360wraps.ae/ServicePage/Wardrobe.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.360wraps.ae/ServicePage/Wardrobe.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.360wraps.ae/ServicePage/Window.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://www.360wraps.ae/ServicePage/backsplash.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.360wraps.ae/ServicePage/backsplash.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
