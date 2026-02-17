@@ -1,12 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "360wraps.ae" }],
-      "destination": "https://www.360wraps.ae/:path*",
-      "statusCode": 301
-    },
-    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
